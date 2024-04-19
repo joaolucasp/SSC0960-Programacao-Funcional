@@ -23,5 +23,7 @@ bhaskara a b c
 
 main :: IO ()
 main = do
-    x <- readLn
-    putStrLn (guardsConditional x)
+    a <- readLn
+    b <- readLn
+    c <- readLn
+    print (show (bhaskara a b c))
