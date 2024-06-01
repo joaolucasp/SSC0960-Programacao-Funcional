@@ -75,6 +75,9 @@ getFramesResult = map score
 
     -- Caso 3: se a lista de jogadas tiver três jogada (última rodada), é avaliado caso a caso
     score [x, y, z]
+        -- 3.0: Caso todas as jogadas sejam STRIKES, retorna "X X X"
+        | x == 10 && y == 10 && z == 10 = "X X X"
+
         -- 3.1: Caso a primeira jogada seja um STRIKE && a segunda jogada NÃO SEJA um SPARE, retorna "X Y Z"
         | x == 10 && y + z < 10 = "X " ++ show y ++ " " ++ show z
 
